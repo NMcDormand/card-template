@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dus81h5hqg4kv"]
+
+[ext_resource type="PackedScene" uid="uid://c4rkjwnlvnsei" path="res://deck management.tscn" id="1_3xs0e"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Deck_management" parent="." instance=ExtResource("1_3xs0e")]
+unique_name_in_owner = true
+card_distance_scaler = 0.1
+Hand_size = 7
+
+[node name="cards" type="Node" parent="Deck_management"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(128, 250)
+zoom = Vector2(1.025, 1.025)

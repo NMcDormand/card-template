@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://djwc6b1j122g4"]
+
+[ext_resource type="Script" path="res://card_template.gd" id="1_nsglw"]
+
+[sub_resource type="Curve2D" id="Curve2D_rv3wc"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -264, 352.134, -323.031, -29.2839, 323.031, 29.2839, 516, 356.093)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_eodmw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1.00171, -0.324814, 0, 0, 0, 0, -0.0619812, -12.206)
+}
+point_count = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_jmnxm"]
+size = Vector2(2500, 4000)
+
+[sub_resource type="QuadMesh" id="QuadMesh_nd6wi"]
+size = Vector2(2000, 1800)
+
+[sub_resource type="LabelSettings" id="LabelSettings_as5o2"]
+font_size = 250
+font_color = Color(0, 0, 0, 1)
+
+[node name="Hand_Path" type="Path2D"]
+position = Vector2(0, -1766.81)
+scale = Vector2(1, 6.0625)
+curve = SubResource("Curve2D_rv3wc")
+script = ExtResource("1_nsglw")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(-264, 352.134)
+rotation = 0.0050753
+rotates = false
+cubic_interp = false
+loop = false
+
+[node name="Selected_Path" type="Path2D" parent="PathFollow2D"]
+position = Vector2(0, -0.112118)
+scale = Vector2(1, 0.654825)
+curve = SubResource("Curve2D_eodmw")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PathFollow2D/Selected_Path"]
+position = Vector2(-1.00171, -0.324814)
+rotation = 1.20695
+rotates = false
+cubic_interp = false
+loop = false
+
+[node name="card" type="MeshInstance2D" parent="PathFollow2D/Selected_Path/PathFollow2D"]
+modulate = Color(0.427493, 0.427493, 0.427493, 1)
+position = Vector2(-7.35004, -1.03292)
+rotation = -1.21475
+scale = Vector2(0.0535091, 0.0131352)
+mesh = SubResource("QuadMesh_jmnxm")
+
+[node name="image" type="MeshInstance2D" parent="PathFollow2D/Selected_Path/PathFollow2D/card"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+position = Vector2(0, -800)
+mesh = SubResource("QuadMesh_nd6wi")
+
+[node name="text" type="Label" parent="PathFollow2D/Selected_Path/PathFollow2D/card"]
+offset_left = -1000.0
+offset_top = 300.0
+offset_right = 1000.0
+offset_bottom = 1800.0
+text = "TEXT"
+label_settings = SubResource("LabelSettings_as5o2")

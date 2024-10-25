@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dp1hxxlg08w3k"]
+
+[node name="Cards" type="Node2D"]
+
+[node name="Move_Piece_as_self" type="Node" parent="."]
+
+[node name="Move_Piece_as_X" type="Node" parent="."]
+
+[node name="Turn_Piece_Into_X" type="Node" parent="."]
