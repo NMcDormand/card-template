@@ -58,6 +58,7 @@ func _discard(To_be_removed):
 		Discard[i].visible = false
 		Discard[i].set_process(false)
 		Discard[i].get_child(0).progress_ratio = 0
+		Discard[i].state = Discard[i].state_not_hovered
 	_hand_size_update()
 	To_be_removed.clear()
 	
@@ -70,6 +71,7 @@ func _hand_size_update():
 		Card_positions.append( 0.5 + (i - (Hand_Mod.size() - 1) / 2) * card_distance_scaler)
 	for i in Hand_Mod.size():
 			Hand_Mod[i].card_position = Card_positions[i]
+			Hand_Mod[i].z_index = i
 	Hand.clear()
 	Hand.append_array(Hand_Mod)
 	Hand_Mod.clear()

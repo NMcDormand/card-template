@@ -75,12 +75,10 @@ label_settings = SubResource("LabelSettings_as5o2")
 
 [node name="Area2D" type="Area2D" parent="PathFollow2D/Selected_Path/PathFollow2D"]
 position = Vector2(-7.62939e-06, 3.05176e-05)
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Selected_Path/PathFollow2D/Area2D"]
 position = Vector2(-7.35668, -1.1698)
 rotation = 0.357792
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_x0qkx")
 
 [connection signal="input_event" from="PathFollow2D/Selected_Path/PathFollow2D/Area2D" to="." method="_on_area_2d_input_event"]

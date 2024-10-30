@@ -8,6 +8,7 @@ var state: Callable = state_undefined
 
 
 
+
 func _process(delta):
 	if card_position > get_child(0).progress_ratio:
 		get_child(0).progress_ratio = get_child(0).progress_ratio + speed * delta
@@ -17,7 +18,7 @@ func _process(delta):
 func _on_area_2d_mouse_entered() -> void:
 	if state != state_selected:
 		state = state_hovered
-
+		
 
 func _on_area_2d_mouse_exited() -> void:
 	if state != state_selected:
