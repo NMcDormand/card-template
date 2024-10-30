@@ -4,13 +4,29 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Deck_management" parent="." instance=ExtResource("1_3xs0e")]
+[node name="Deck_management" parent="." groups=["deck manager"] instance=ExtResource("1_3xs0e")]
 unique_name_in_owner = true
 card_distance_scaler = 0.1
-Hand_size = 7
 
 [node name="cards" type="Node" parent="Deck_management"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(128, 250)
 zoom = Vector2(1.025, 1.025)
+
+[node name="draw" type="Button" parent="."]
+offset_left = -342.0
+offset_top = 115.0
+offset_right = -168.0
+offset_bottom = 178.0
+text = "DRAW"
+
+[node name="Discard" type="Button" parent="."]
+offset_left = 393.0
+offset_top = 134.0
+offset_right = 567.0
+offset_bottom = 197.0
+text = "Discard"
+
+[connection signal="pressed" from="draw" to="Deck_management" method="_on_draw_pressed"]
+[connection signal="pressed" from="Discard" to="Deck_management" method="_on_discard_pressed"]

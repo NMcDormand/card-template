@@ -1,0 +1,11 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1730259382
+button.gd::GDScript::-1::1730245822::0::1::::<>Button<>::
+cards.gd::GDScript::-1::1730254635::0::1::::<>Node<>::
+cards.tscn::PackedScene::8266235844801767218::1729917418::0::1::::<><>::
+card_template.gd::GDScript::-1::1730257291::0::1::::<>Path2D<>::
+card_template.tscn::PackedScene::7836554841140515565::1730257970::0::1::::<><>::res://card_template.gd
+deck management.gd::GDScript::-1::1730257812::0::1::::<>Node<>::
+deck management.tscn::PackedScene::6844036672905511344::1729917418::0::1::::<><>::res://deck management.gd
+icon.svg::CompressedTexture2D::8627404802350404489::1729917418::1729992807::1::::<><>::
+main.tscn::PackedScene::8602248229163129965::1730257970::0::1::::<><>::uid://c4rkjwnlvnsei::::res://deck management.tscn
