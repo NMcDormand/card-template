@@ -17,15 +17,13 @@ func _process(delta):
 
 func _on_area_2d_mouse_entered() -> void:
 	$"/root/Variables".select_delin.append(self)
-	print(z_index,"entered")
 	$"/root/Variables".delin()
 
 
 func _on_area_2d_mouse_exited() -> void:
+	$"/root/Variables".delin()
 	$"/root/Variables".select_delin.erase(self)
 	state = state_not_hovered
-	print(z_index,"exited")
-	$"/root/Variables".delin()
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
@@ -62,5 +60,7 @@ func state_undefined(delta):
 func state_update(bool):
 	if bool == true:
 		state = state_hovered
+		print(z_index," hover")
 	if bool == false:
 		state = state_not_hovered
+		print(z_index," not hover")
