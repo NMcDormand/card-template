@@ -14,30 +14,18 @@ func _process(delta):
 		get_child(0).progress_ratio = get_child(0).progress_ratio + speed * delta
 	state.call(delta)
 
-func get_path2d_width(path2d: Path2D) -> float:
-	var curve = path2d.curve
-	if not curve:
-		print("Path2D has no curve.")
-		return 0
-
-	var min_x = INF
-	var max_x = -INF
-
-	for i in range(curve.get_point_count()):
-		var point = curve.get_point_position(i)
-		min_x = min(min_x, point.x)
-		max_x = max(max_x, point.x)
-
-	return max_x - min_x
-
 
 func _on_area_2d_mouse_entered() -> void:
 	$"/root/Variables".select_delin.append(self)
+	print(z_index,"entered")
+	$"/root/Variables".delin()
 
 
 func _on_area_2d_mouse_exited() -> void:
 	$"/root/Variables".select_delin.erase(self)
 	state = state_not_hovered
+	print(z_index,"exited")
+	$"/root/Variables".delin()
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
@@ -71,5 +59,8 @@ func state_selected(delta):
 func state_undefined(delta):
 	pass
 
-func state_update():
-	state = state_hovered
+func state_update(bool):
+	if bool == true:
+		state = state_hovered
+	if bool == false:
+		state = state_not_hovered
