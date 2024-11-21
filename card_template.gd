@@ -21,8 +21,8 @@ func _on_area_2d_mouse_entered() -> void:
 
 
 func _on_area_2d_mouse_exited() -> void:
-	$"/root/Variables".delin()
 	$"/root/Variables".select_delin.erase(self)
+	$"/root/Variables".delin()
 	state = state_not_hovered
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
