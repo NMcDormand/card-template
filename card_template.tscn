@@ -29,7 +29,7 @@ size = Vector2(52.3906, 133.001)
 
 [node name="Hand_Path" type="Path2D"]
 modulate = Color(0.8, 0.8, 0.8, 1)
-position = Vector2(0, -1766.81)
+position = Vector2(-8, -1676)
 scale = Vector2(1, 6.0625)
 curve = SubResource("Curve2D_rv3wc")
 script = ExtResource("1_nsglw")

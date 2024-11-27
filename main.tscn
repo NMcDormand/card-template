@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dus81h5hqg4kv"]
+[gd_scene load_steps=4 format=3 uid="uid://dus81h5hqg4kv"]
 
 [ext_resource type="PackedScene" uid="uid://c4rkjwnlvnsei" path="res://deck management.tscn" id="1_3xs0e"]
+[ext_resource type="Script" path="res://node.gd" id="2_to1vx"]
+[ext_resource type="PackedScene" uid="uid://bxtphm78u1s8j" path="res://board_manager.tscn" id="3_cwnd2"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -27,6 +29,12 @@ offset_top = 134.0
 offset_right = 567.0
 offset_bottom = 197.0
 text = "Discard"
+
+[node name="BUGS TO BE FIXED" type="Node" parent="."]
+process_mode = 4
+script = ExtResource("2_to1vx")
+
+[node name="Board Manager" parent="." instance=ExtResource("3_cwnd2")]
 
 [connection signal="pressed" from="draw" to="Deck_management" method="_on_draw_pressed"]
 [connection signal="pressed" from="Discard" to="Deck_management" method="_on_discard_pressed"]

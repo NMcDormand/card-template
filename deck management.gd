@@ -1,17 +1,25 @@
 extends Node
+#an array of nodes(cards). currently in the deck 
 var Deck: Array
+#an array of nodes(cards). currently in the hand
 var Hand: Array
+#a temporary holder for cards about to be added to the hand
 var Hand_Mod: Array
+#an array of nodes(cards). currently in the discard
 var Discard: Array
+#a temporary holder for cards about to be added to the discard
 var To_be_removed: Array
+#used to assign each card in the hand a unique z_index
 var Card_positions: Array
+#a simple scaler for the distance between cards in a hand
 @export var card_distance_scaler: float
+#the cards currently selected
 var selected_group: Array
-
-
+#used for instantiating the stated card into the scene
 var card_template = preload("res://card_template.tscn")
 
 
+#a temporary script for creating a deck of template cards to test with
 func _ready():
 	for i in 10:
 		var card_instance = card_template.instantiate()
@@ -77,10 +85,12 @@ func _hand_size_update():
 	Hand_Mod.clear()
 
 
+#receives the signal from the draw button and draws a single card
 func _on_draw_pressed() -> void:
 	_draw(1)
 
 
+#receives the signal from the discard button and discards all selected cards
 func _on_discard_pressed() -> void:
 	if selected_group.size() > 0:
 		_discard(selected_group)
