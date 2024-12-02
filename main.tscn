@@ -13,21 +13,21 @@ card_distance_scaler = 0.1
 [node name="cards" type="Node" parent="Deck_management"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(128, 250)
+position = Vector2(32, 208)
 zoom = Vector2(1.025, 1.025)
 
 [node name="draw" type="Button" parent="."]
-offset_left = -342.0
-offset_top = 115.0
-offset_right = -168.0
-offset_bottom = 178.0
+offset_left = -768.0
+offset_top = -64.0
+offset_right = -594.0
+offset_bottom = -1.0
 text = "DRAW"
 
 [node name="Discard" type="Button" parent="."]
-offset_left = 393.0
-offset_top = 134.0
-offset_right = 567.0
-offset_bottom = 197.0
+offset_left = 656.0
+offset_top = -64.0
+offset_right = 830.0
+offset_bottom = -1.0
 text = "Discard"
 
 [node name="BUGS TO BE FIXED" type="Node" parent="."]
@@ -35,6 +35,8 @@ process_mode = 4
 script = ExtResource("2_to1vx")
 
 [node name="Board Manager" parent="." instance=ExtResource("3_cwnd2")]
+position = Vector2(-288, -216)
+scale = Vector2(2.26, 2.26)
 
 [connection signal="pressed" from="draw" to="Deck_management" method="_on_draw_pressed"]
 [connection signal="pressed" from="Discard" to="Deck_management" method="_on_discard_pressed"]

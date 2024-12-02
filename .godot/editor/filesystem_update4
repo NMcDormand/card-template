@@ -1,8 +1,5 @@
-res://main.tscn
 res://card_template.tscn
-res://card_template.gd
-res://deck management.gd
-res://variables.gd
 res://node.gd
+res://main.tscn
 res://board_manager.tscn
 res://board_manager.gd

@@ -1,26 +1,27 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1732666646
-button.gd::GDScript::-1::1730245822::0::1::::<>Button<>::
-cards.gd::GDScript::-1::1730254635::0::1::::<>Node<>::
-cards.tscn::PackedScene::8266235844801767218::1729917418::0::1::::<><>::
-card_template.gd::GDScript::-1::1732655856::0::1::::<>Path2D<>::
-card_template.tscn::PackedScene::7836554841140515565::1732666646::0::1::::<><>::res://card_template.gd
-deck management.gd::GDScript::-1::1732655856::0::1::::<>Node<>::
-deck management.tscn::PackedScene::6844036672905511344::1729917418::0::1::::<><>::res://deck management.gd
-icon.svg::CompressedTexture2D::8627404802350404489::1729917418::1732653998::1::::<><>::
-main.tscn::PackedScene::8602248229163129965::1732666646::0::1::::<><>::uid://c4rkjwnlvnsei::::res://deck management.tscn<>res://node.gd
-node.gd::GDScript::-1::1732656284::0::1::::<>Node<>::
-board_manager.gd::GDScript::-1::1732666596::0::1::::<>Node2D<>::
-board_manager.tscn::PackedScene::4040911201384895459::1732666646::0::1::::<><>::res://board_manager.gd<>uid://bgpi7j4f7cq40::::res://FreePack/Board.png
-variables.gd::GDScript::-1::1732655856::0::1::::<>Node<>::
-::res://FreePack/::1732668500
-BishopWhite.png::CompressedTexture2D::2416254114870126708::1732657476::1732657476::1::::<><>::
-board.png::CompressedTexture2D::2839062810958797731::1732668500::1732668500::1::::<><>::
-ChessBoard.png::CompressedTexture2D::6318953860190241268::1732657476::1732657476::1::::<><>::
-direction2.png::CompressedTexture2D::7996965219519768007::1732657476::1732657476::1::::<><>::
-direction.png::CompressedTexture2D::1143655708411101894::1732657476::1732657476::1::::<><>::
-KingWhite.png::CompressedTexture2D::7848149829919160813::1732657476::1732657476::1::::<><>::
-NightWhite.png::CompressedTexture2D::5083793114723063008::1732657476::1732657476::1::::<><>::
-PawnWhite.png::CompressedTexture2D::7700299073782042335::1732657476::1732657476::1::::<><>::
-QueenWhite.png::CompressedTexture2D::591074272024122390::1732657476::1732657476::1::::<><>::
-RookWhite.png::CompressedTexture2D::8930693922361770417::1732657476::1732657476::1::::<><>::
+::res://::1733106960
+board_manager.gd::GDScript::-1::1733104887::0::1::::<>Node2D<>::
+board_manager.tscn::PackedScene::4040911201384895459::1733104887::0::1::::<><>::res://board_manager.gd<>uid://bgpi7j4f7cq40::::res://FreePack/board.png
+button.gd::GDScript::-1::1733104887::0::1::::<>Button<>::
+cards.gd::GDScript::-1::1733104887::0::1::::<>Node<>::
+cards.tscn::PackedScene::8266235844801767218::1733104887::0::1::::<><>::
+card_template.gd::GDScript::-1::1733104887::0::1::::<>Path2D<>::
+card_template.tscn::PackedScene::7836554841140515565::1733105787::0::1::::<><>::res://card_template.gd
+deck management.gd::GDScript::-1::1733104887::0::1::::<>Node<>::
+deck management.tscn::PackedScene::6844036672905511344::1733104887::0::1::::<><>::res://deck management.gd
+icon.svg::CompressedTexture2D::8627404802350404489::1733104887::1733104887::1::::<><>::
+main.tscn::PackedScene::8602248229163129965::1733105787::0::1::::<><>::uid://c4rkjwnlvnsei::::res://deck management.tscn<>res://node.gd<>uid://bxtphm78u1s8j::::res://board_manager.tscn
+node.gd::GDScript::-1::1733105067::0::1::::<>Node<>::
+tileatlas.png::CompressedTexture2D::2497506196620139853::1733106961::1733106971::1::::<><>::
+variables.gd::GDScript::-1::1733104887::0::1::::<>Node<>::
+::res://FreePack/::1733104887
+BishopWhite.png::CompressedTexture2D::2416254114870126708::1733104887::1733104887::1::::<><>::
+board.png::CompressedTexture2D::2839062810958797731::1733104887::1733104887::1::::<><>::
+ChessBoard.png::CompressedTexture2D::6318953860190241268::1733104887::1733104887::1::::<><>::
+direction2.png::CompressedTexture2D::7996965219519768007::1733104887::1733104887::1::::<><>::
+direction.png::CompressedTexture2D::1143655708411101894::1733104887::1733104887::1::::<><>::
+KingWhite.png::CompressedTexture2D::7848149829919160813::1733104887::1733104887::1::::<><>::
+NightWhite.png::CompressedTexture2D::5083793114723063008::1733104887::1733104887::1::::<><>::
+PawnWhite.png::CompressedTexture2D::7700299073782042335::1733104887::1733104887::1::::<><>::
+QueenWhite.png::CompressedTexture2D::591074272024122390::1733104887::1733104887::1::::<><>::
+RookWhite.png::CompressedTexture2D::8930693922361770417::1733104887::1733104887::1::::<><>::

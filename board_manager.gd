@@ -14,12 +14,19 @@ func selectable():
 	hover_tile_atlas = get_child(0).get_cell_atlas_coords(hover_position_new)
 	if hover_position != hover_position_new:
 		if hover_tile_atlas == Vector2i(2,1):
-			get_child(0).set_cell(hover_position_new,1, Vector2i(0,0) , 0)
+			get_child(0).set_cell(hover_position_new,0, Vector2i(0,0) , 0)
 		elif hover_tile_atlas == Vector2i(3,1):
-			get_child(0).set_cell(hover_position_new,1, Vector2i(1,0) , 0)
+			get_child(0).set_cell(hover_position_new,0, Vector2i(1,0) , 0)
 	elif hover_position == hover_position_new:
 		if hover_tile_atlas == Vector2i(0,0):
-			get_child(0).set_cell(hover_position_new,1, Vector2i(2,1) , 0)
+			get_child(0).set_cell(hover_position_new,0, Vector2i(2,1) , 0)
 		elif hover_tile_atlas == Vector2i(1,0):
-			get_child(0).set_cell(hover_position_new,1, Vector2i(3,1) , 0)
+			get_child(0).set_cell(hover_position_new,0, Vector2i(3,1) , 0)
 	hover_position_new = hover_position
+
+
+func _input(event:InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_mask == MOUSE_BUTTON_LEFT:
+			if hover_tile_atlas != Vector2i(-1, -1):
+				pass
